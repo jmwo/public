@@ -1,0 +1,259 @@
+QS K5 IJV Mod Changelog 
+
+
+
+									****** A T T E N Z I O N E ******
+
+**********************************************************************************************************
+versione V3.14 solo per radio con memoria EEprom originale da 8K 24C64
+
+versione VX3.14 per radio dotate di modifica hardware con memoria eeprom > 64 K  24C512 / 24M01 / 24M002
+**********************************************************************************************************
+
+VX3.14 / V3.14 21/04/24
+----------------------------------------------------------------------------------
+- corretto Bug su aggiornamento visualizzazione RFGain con doppio VFO su stessa banda
+- corretto bug su Trasmissione Beacon in doppio VFO
+- corretto bug su impostazione limiti di scansione con shift attivato
+- corretto bug su salvataggio memoria esistente
+- corretto bug su impostazione da menu per l'AGC.
+- corretto bug su ripartenza scansione dopo Ricerca Toni.
+- cambio banda automatico su ricerca 
+- modificata scansione ora esclude a priori memorie broadcast WFM senza attivare lo Skip.
+- modicata barra smeter resa piu' piccola per una disposizione migliore sullo schermo
+- migliorata ricezione FM all'accensione.
+- inserito da tastiera il comando F + 4 per lo skip scansione della memoria
+- disattivazione automatica del monitor all'avvio della scansione
+- aggiunta funzione in Beacon mode per chiamare alternativamente su 2 frequenze
+- aggiunto in visualizzazione Doppio VFO indicatore RF Gain e AGC per ciascun VFO
+- aggiunte funzioni per la comunicazione seriale
+- ottimizzazione codice.
+
+
+
+VX3.13 / V3.13 4/04/24
+----------------------------------------------------------------------------------
+- corretto bug su visualizzazione nome memoria dopo impostazione 1-CALL
+- aggiunta visualizzazione permanente valore RFGain e tipo AGC sul display
+- corretto bug su pressione tasti laterali con popup aperto
+- modificata tabella BW aggiunti altri 4 valori per un totale di 8 selezioni
+
+
+
+VX3.12 / V3.12 1/04/24
+----------------------------------------------------------------------------------
+- migliorata scansione frequenze eliminati fastidiosi pop rimasti.
+- migliorata ricezione FM 88-108 all'accensione aggiunto tempo extra per stabilizzare AFC
+
+
+
+VX3.11 / V3.11 31/03/24
+----------------------------------------------------------------------------------
+- corretto difetto sulla gestione della FM 88-108
+- modificati gli step eliminati 500 Khz e 1 Mhz e aggiunti altri.
+
+
+
+Vx3.1        29-03-24
+----------------------------------------------------------------------------------
+- versione speciale da 999 canali per memorie eeprom estese.
+  stesse caratteristiche della 3.1 ma con l'aggiunta della memoria estesa
+  non e' assolutamente compatibile con radio senza modifica hardware.
+
+
+
+V3.1        29-03-24
+----------------------------------------------------------------------------------
+- Corretto Bug su ricerca Toni CTCSS
+- Corretto Bug su memorizzazione veloce F+4 dopo la memoria 128
+- Eliminata Visualizzazione Blacklist ( inutile perche' c'e' gia' nella ScList )
+- Ottimizzate alcune funzioni per recuperare spazio
+- Corretta la visualizzazione della prima memoria al cambio del gruppo.
+- Linearizzata la curva di risposta del Gain, rivisti i valori visualizzati.
+
+
+
+V3.0        22-03-24
+----------------------------------------------------------------------------------
+- Accorpata nel VFO la banda 76-108 con FM Wide ed eliminato il programma 
+  originale di gestione. si richiama sempre con il tasto F + 0 ora e' possibile 
+  memorizzare le frequenze nelle normali memorie assegnandogli un nome
+  
+- creati 15 gruppi di memoria personalizzabili con scansione separata, eliminate le liste di scansione.
+
+- aggiunti 12 preset completamente personalizzabili 
+
+- aggiunto preselettore di banda
+
+- aggiunta visualizzazione BlackList
+
+- aggiunta Visualizzazione LOG di scansione con selezione automatica
+
+- modificata selezione RFGain 
+
+- aggiunta funzione AGC MAN ai tasti laterali per accedere rapidamente al controllo del RFGAIN.
+
+- Rivista tutta la struttura dati EEPROM e Predisposto per espansione da 999 memorie.
+
+- aggiunto squelch per ogni memoria / VFO / Banda
+
+- aggiunto flag blocco scansione per memoria
+
+- aggiunto flag write protect per memoria
+
+- aggiunto VFO LOCK al menu servizi per modalita' VFO / Memoria o Solo Memoria.
+
+- aggiunto codice selettiva per ogni memoria max 10 caratteri
+
+- aggiunta frequenza upconverter personalizzabile
+
+- aggiunte voci SLOW / FAST a scansione per ripresa lenta/rapida al termine della comunicazione
+  
+- Aggiunta nel menu la voce BLTYPE per scegliere la modalita' normale o invertita
+
+- aggiunto RESET DATA alla voce RESET del menu servizi per la cancellazione dei dati personali.
+
+- aggiunti menu popup a tendina per le operazioni veloci
+
+- aggiunti i tempi di 1, 3, 6 minuti per il Beacon e/o richiamata automatica 
+
+- modificato il layout dello schermo rivisti i font dei caratteri e le icone
+
+- semplificata procedura Reset VFO con parametri di base preimpostati
+
+
+
+
+----------------------------------------------------------------------------------
+01-02-24 Aggiornato Modulo Chirp
+----------------------------------------------------------------------------------
+31-01-24 Aggiornato Modulo Chirp
+----------------------------------------------------------------------------------
+
+V2.9 R5     30-01-24
+----------------------------------------------------------------------------------
+ **** ATTENZIONE INSTALLARE SOLO CON K5PROG ****
+ 
+- aggiunto Squelch differenziato per singolo VFO
+- il cambio dello squelch da pulsanti laterali adesso salva l'ultimo valore.
+- aggiunta visualizzazione Frequenze e codici toni CTCSS e DCS nel VFO Singolo
+- accorpate sigle VFO per recuperare spazio 
+
+
+
+V2.9 R4     27-01-24
+----------------------------------------------------------------------------------
+- aggiunto blocco/sblocco tastiera in scansione
+- evitato blocco automatico tastiera se si e' dentro il menu
+- ripristinato scrambler e compander solo in FM in altri tipi di modulazioni non funziona.
+- verifica immediata scrambler in ricezione da menu.
+- risolto il Bug del Vox in AM e DSB
+- aumentato il timeout del Vox da 1 secondo a 2 secondi.
+
+
+
+V2.9 R3
+----------------------------------------------------------------------------------
+- Modificati tempi per TxTOT e Beacon
+- aggiunto preavviso TxTOT a 10 e 5 secondi prima della chiusura 
+- modificate funzioni del tasto EXIT attive adesso solo per VFO 
+- Attivato VOX anche per le altre modulazioni tranne CW
+- attivato scrambler anche su altre modulazioni tranne CW
+- corretta l'impostazione dei livelli del VOX
+- ritardata attivazione del VOX all'avvio.
+- Aggiunta visualizzazione FM Lock in FM 88-108
+- Corretta indicazione del Beacon Attivo nel VFO
+- aggiunta protezione per salvaguardia dati su eeprom in caso di batteria scarica.
+
+- ripristinata tensione batteria nel menu INFO *
+
+  * ( considerate il valore come indicativo, a causa delle tolleranze costruttive  puo' non essere esatto, 
+    e dati i precedenti su questo non sento ragioni prendetelo cosi' com'e' e se non vi sta bene non lo guardate ). 
+    
+- riaggiustata la scala batteria 4 tacche > 8V  poi decresce 0.25V (circa) ogni tacca. **
+
+  ** ( questa scala e' una mia impostazione non si faranno variazioni di nessun tipo, vedi nota precedente )
+    
+  
+  
+
+V2.9 R2
+----------------------------------------------------------------------------------
+- Aggiunta funzione Beacon nel Menu che consente la ripetizione del messaggio in CW
+- modificati i tempi per TOT e Beacon
+- modificata voce menu da QRZ a QRA
+- Aggiunta voce al Menu 18 per visualizzazione Notturna del display
+- Il contenuto del vfo viene salvato quando si passa da Memoria a VFO
+- modificata visualizzazione iniziale scegliendo la voce MESSAGE da PONMSG vengono visualizzati 3 campi anziche' 2
+  * Nominativo
+  * Scritta 1
+  * Scritta 2
+
+- modificata anche visualizzazione iniziale tipo firmware con aggiunta della versione
+- eliminata scelta di visualizzazione del solo nominativo
+- corretto bug illuminazione display con preset
+- eliminate dal menu le voci inutili Slist 1,2 e SAdd 1,2
+- corretto bug su trasmissione CW e REGA con blocco Tx
+- corretto bug passaggio tra mem a vfo con shift per ponti attivo
+- corretto bug Clear VFO con shift attivo
+
+
+V2.9 R1
+----------------------------------------------------------------------------------
+- Corretta la spaziatura extra nel nominativo nella trasmissione automatica CW 
+- ritoccati i tempi nella trasmissione automatica CW
+- corretto BUG menu 19 dopo Reset VFO
+- aggiunto blocco trasmissione automatica CW con pulsante PTT
+
+
+V2.9
+----------------------------------------------------------------------------------
+- Inserita funzione chiamata Automatica CW ( con QRZ ) con visualizzazione dei
+  caratteri trasmissi sui display.
+- Inserita nuova funzione ( CALL CW ) nelle associazioni pulsanti laterali
+- inserito campo QRZ nel menu servizi
+- inserita voce menu PONMSG per visualizzazione QRZ all'avvio
+- aggiunto step 9 Khz
+- aumentata a 5 elementi la lista degli step brevi
+- attivata chiamata selettiva di gruppo in DTMF
+- aggiunto ritorno a OFF immediato con tasto 0 in immissione CTCSS
+
+- eliminata voce attivazione Scrambler dal menu servizi
+- corretto passo 8.33 si riallinea 25 Khz 
+
+
+V2.8d
+----------------------------------------------------------------------------------
+- Migliorata Modulazione AM e DSB
+- ripristinato funzionamento micbar in AM,SSB e CW 
+- aggiunta selettiva CCIR-1 a 100 ms ( CCIR-1F = 50 ms )
+- rese piu' silenziose tutte le operazioni in monitor eliminati i click fastidiosi.
+- migliorata visualizzazione DTMF Live
+
+- corretto BUG su calibrazione frequenza
+- corretto bug su dual watch all'avvio.
+- corretto smeter in doppia visualizzazione
+- corretto bug su Xrit e Monitor attivo
+- correzione BUG cambio AGC con memoria attiva
+- correzione bug su Chiamata selettiva DTMF
+b - correzione sovrapposizione Smeter con dbM
+c - corretto bug invio DTMF da tastiera in trasmissione
+c - corretto bug su ascolto in FM ( blocco dei tasti laterali )
+d - corretta selettiva CCIR-1 ( 100 ms )
+
+
+V2.7
+----------------------------------------------------------------------------------
+- inserite lettere su codici selettive : OWN ID , UPCODE, DWCODE
+- inserito tono Custom su CTCSS
+- inserita Calibrazione Frequenza per CW e SSB
+- corretto problema blocco tastiera su FM 88-108
+- ripristinata status line su FM 88-108
+- corretto bug sulle selettive
+- corretto bug sul cambio banda
+
+
+V2.6 R4
+----------------------------------------------------------------------------------
+- Eliminato fastidioso click su cambio frequenza con monitor attivo.
+- correzioni varie
